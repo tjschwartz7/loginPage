@@ -1,4 +1,5 @@
 <?php
+//include the navigation bar (not included here)
 require 'requires/nav2.php';
 ?>
 
@@ -15,14 +16,9 @@ require 'requires/nav2.php';
     </head>
 
     <body>
-
+<!-- form containing the filename to go to upon hitting submit, and specifying submit method='post'
+(the secure way to submit a password so user info is not displayed in the <title>-->
       <form id="loginbox" action="include/signup.inc.php" method="post">
-  <!--  <div class="loginimg-container">
-      <div class="loginimg-item loginimg-item-1">
-      <h1 id="siteName">Nerdy Owl</h1>
-    </div>
-    </div>
-  -->
 
     <div class="login-container">
       <p class="passwordlabel" style="font-family:sans-serif, serif;">Passwords must contain more than 8 digits,
@@ -46,17 +42,6 @@ require 'requires/nav2.php';
       <input type="text" placeholder="Enter email" name="email" required>
     </li>
   <li>
-  <!--  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded',
-    function(){
-      document.getElementById('submit').onclick = function(){
-    var pw1 = document.getElementsByClassName("pw1").value;
-    var pw2 = document.getElementsByClassName("pw2").value;
-    if(pw1 !== pw2) document.getElementsByClassName("passwordlabel")[0].textContent = "Passwords do not match";
-    else document.getElementsByClassName("passwordlabel")[0].textContent= "Passwords match!";
-  };
-  });
-</script>-->
       <label for="pw1"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="pw1" class="pw1" required>
     </li>
@@ -77,7 +62,6 @@ require 'requires/nav2.php';
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-
   </ul>
 
     <div class="color-bar"></div>
@@ -87,9 +71,3 @@ require 'requires/nav2.php';
     </body>
   </html>
 </main>
-
-
-
-<?php
-
-?>
